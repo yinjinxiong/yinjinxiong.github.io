@@ -3,10 +3,37 @@
   
     
     <entry>
+      <title>windows 搭建博客hexo + github</title>
+      <link href="/2018/05/05/windows-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2hexo-github/"/>
+      <url>/2018/05/05/windows-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2hexo-github/</url>
+      <content type="html"><![CDATA[<p>本文主要介绍在Windows环境下结合github page 搭建hexo 博客，包括自定义域名，创建七牛图床，个性化设置等。下图是总体的一个概述：<br><img src="http://p82xdlzne.bkt.clouddn.com/blog_20180505123621.png" alt="hexo博客搭建概述"><br>下面将会一一详细说明        </p><h1 id="搭建本地博客的准备工作"><a href="#搭建本地博客的准备工作" class="headerlink" title="搭建本地博客的准备工作"></a>搭建本地博客的准备工作</h1><p><img src="http://p82xdlzne.bkt.clouddn.com/%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.png" alt="博客准备工作">            </p><ul><li>安装git<br>下载<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">地址</a>，如果没有特殊要求，只要一直next即可，建议自定义安装的路径。<br>查看git是否安装：        <pre><code>git --version        </code></pre><strong>注意，下面涉及到的命令应该都在 git bash 中执行（git安装后，鼠标右键即可看到git bash</strong>         </li></ul><ul><li><p>安装node.js<br>打开<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">网址</a>，选择你Windows系统对应的安装包，我的是64位，所以选择64位的安装包，点击即可下载：<br><img src="http://p82xdlzne.bkt.clouddn.com/node%E4%B8%8B%E8%BD%BD.png" alt="node下载图"><br>如果没有特殊要求，只要一直next即可，建议自定义安装的路径。<br>验证node是否安装成功        </p><pre><code>node -v         </code></pre><p>安装成功后会输出版本号            </p></li><li><p>安装hexo<br>执行以下命令安装hexo的客户端:        </p><pre><code>npm install  hexo-cli -g        </code></pre><p>验证方式：        </p><pre><code>hexo -v         </code></pre></li></ul><h1 id="本地博客的使用"><a href="#本地博客的使用" class="headerlink" title="本地博客的使用"></a>本地博客的使用</h1><p><img src="http://p82xdlzne.bkt.clouddn.com/%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8.png" alt="博客使用">        </p><ul><li>初始化博客，创建博客目录blog以及对目录进行初始化:        <pre><code>hexo init blog        </code></pre></li><li>清空静态页面        <pre><code>hexo clean        </code></pre></li><li>创建post文章:        <pre><code>hexo n &quot;title&quot;        </code></pre></li><li>生成静态页面:        <pre><code>hexo g        </code></pre></li><li>发布静态页面到线上        <pre><code>hexo d        </code></pre></li><li>本地启动hexo服务器        <pre><code>hexo s</code></pre><h1 id="关联github-page"><a href="#关联github-page" class="headerlink" title="关联github page"></a>关联github page</h1></li></ul><p><img src="http://p82xdlzne.bkt.clouddn.com/%E5%85%B3%E8%81%94githubPage.png" alt="博客关联githubPage">        </p><ul><li><p>注册github账号，注册<a href="https://github.com/" target="_blank" rel="noopener">地址</a>        </p></li><li><p>创建仓库，仓库名称为username.github.io，username 就是github的用户名        </p></li><li><p>本地电脑生成ssh密钥对，并把公钥放到github上保存，方便推送博客到github上面        </p></li></ul>]]></content>
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> github page </tag>
+            
+            <tag> windows </tag>
+            
+            <tag> 博客搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>hexo的常用命令</title>
       <link href="/2018/05/01/hexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
       <url>/2018/05/01/hexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-      <content type="html"><![CDATA[<p>主要是记录使用hexo写博客的常用命令    </p><h1 id="生成post文件"><a href="#生成post文件" class="headerlink" title="生成post文件"></a>生成post文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo n 文章标题</span><br><span class="line">eg：</span><br><span class="line">hexo n index</span><br><span class="line">```</span><br><span class="line"># 生成html文件</span><br><span class="line">```</span><br><span class="line">hexo g </span><br><span class="line">```</span><br><span class="line"># 发布到远程站点，比如GitHub</span><br></pre></td></tr></table></figure><p>hexo d<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 启动本地的服务</span><br></pre></td></tr></table></figure></p><p>hexo s<br><code>`</code></p>]]></content>
+      <content type="html"><![CDATA[<p>主要是记录使用hexo写博客的常用命令        </p><h1 id="生成post文件"><a href="#生成post文件" class="headerlink" title="生成post文件"></a>生成post文件</h1><pre><code>hexo n 文章标题            eg：        hexo n index        </code></pre><h1 id="生成html文件"><a href="#生成html文件" class="headerlink" title="生成html文件"></a>生成html文件</h1><pre><code>hexo g         </code></pre><h1 id="发布到远程站点，比如GitHub"><a href="#发布到远程站点，比如GitHub" class="headerlink" title="发布到远程站点，比如GitHub"></a>发布到远程站点，比如GitHub</h1><pre><code>hexo d        </code></pre><h1 id="启动本地的服务"><a href="#启动本地的服务" class="headerlink" title="启动本地的服务"></a>启动本地的服务</h1><pre><code>hexo s         </code></pre>]]></content>
       
       <categories>
           
