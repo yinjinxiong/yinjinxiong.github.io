@@ -91,7 +91,8 @@
 <meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.png">
 <meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/node%E4%B8%8B%E8%BD%BD.png">
 <meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8.png">
-<meta property="og:updated_time" content="2018-05-06T05:03:26.193Z">
+<meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E5%85%B3%E8%81%94githubPage.png">
+<meta property="og:updated_time" content="2018-05-06T05:09:44.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows 搭建博客hexo + github">
 <meta name="twitter:description" content="本文主要介绍在Windows环境下结合github page 搭建hexo 博客，包括自定义域名，创建七牛图床，个性化设置等。下图是总体的一个概述：下面将会一一详细说明         搭建本地博客的准备工作              安装git下载地址，如果没有特殊要求，只要一直next即可，建议自定义安装的路径。查看git是否安装：        git --version         注">
@@ -427,29 +428,36 @@
 </code></pre></li>
 <li>清空静态页面        <pre><code>hexo clean        
 </code></pre></li>
-<li>创建post文章:        <pre><code>hexo n &quot;title&quot; == hexo new &quot;title&quot;        
+<li>创建post文章:        <pre><code>hexo n &quot;title&quot; 等价于 hexo new &quot;title&quot;        
 </code></pre></li>
-<li>生成静态页面:        <pre><code>hexo g == hexo generate        
+<li>生成静态页面:        <pre><code>hexo g 等价于 hexo generate        
 </code></pre></li>
-<li>部署静态页面到线上，比如github        <pre><code>hexo d == hexo deploy        
+<li><p>部署静态页面到线上，比如github        </p>
+<pre><code>hexo d 等价于 hexo deploy        
 </code></pre></li>
-<li>本地启动hexo服务器<br><code>`</code><br>hexo s == hexo server #这个方式启动，hexo会自动监听文件变动并自动更新，无需重启服务器<br>hexo server -s #静态模式<br>hexo -p 5000 #更改端口<br>hexo -i 192.168.21.137 #更改IP        </li>
+<li><p>本地启动hexo服务器        </p>
+</li>
 </ul>
-<pre><code>在浏览器中输入网址进行验证:        
-</code></pre><p><a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
 <pre><code>
+hexo s 等价于 hexo server #这个方式启动，hexo会自动监听文件变动并自动更新，无需重启服务器                
 
-# 关联github page        
+hexo server -s #静态模式                
 
-![博客关联githubPage](http://p82xdlzne.bkt.clouddn.com/%E5%85%B3%E8%81%94githubPage.png)        
+hexo -p 5000 #更改端口                
 
-- 注册github账号，注册[地址](https://github.com/)        
-
-- 创建仓库，仓库名称为username.github.io，username 就是github的用户名        
-
-- 本地电脑生成ssh密钥对，并把公钥放到github上保存，方便推送博客到github上面            
-鼠标点击右键，选择git bash，设置user.name 和user.email 的配置信息：                
-</code></pre><p>git config –global user.name “你的github用户名”<br>git config –global user.email “你的github注册邮箱”                        </p>
+hexo -i 192.168.21.137 #更改IP                
+</code></pre><p>在浏览器中输入网址进行验证:        </p>
+<pre><code>http://localhost:4000
+</code></pre><h1 id="关联github-page"><a href="#关联github-page" class="headerlink" title="关联github page"></a>关联github page</h1><p><img src="http://p82xdlzne.bkt.clouddn.com/%E5%85%B3%E8%81%94githubPage.png" alt="博客关联githubPage">        </p>
+<ul>
+<li><p>注册github账号，注册<a href="https://github.com/" target="_blank" rel="noopener">地址</a>        </p>
+</li>
+<li><p>创建仓库，仓库名称为username.github.io，username 就是github的用户名        </p>
+</li>
+<li><p>本地电脑生成ssh密钥对，并把公钥放到github上保存，方便推送博客到github上面<br>鼠标点击右键，选择git bash，设置user.name 和user.email 的配置信息：<br><code>`</code>        </p>
+</li>
+</ul>
+<p>git config –global user.name “你的github用户名”<br>git config –global user.email “你的github注册邮箱”                        </p>
 <pre><code>生成ssh秘钥文件        
 </code></pre><p>ssh-keygen -t rsa -C “你的github注册邮箱”</p>
 <pre><code>**然后直接按三个回车，默认不需要密码**        
@@ -690,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建本地博客的准备工作"><span class="nav-number">1.</span> <span class="nav-text">搭建本地博客的准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地博客的使用"><span class="nav-number">2.</span> <span class="nav-text">本地博客的使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建本地博客的准备工作"><span class="nav-number">1.</span> <span class="nav-text">搭建本地博客的准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地博客的使用"><span class="nav-number">2.</span> <span class="nav-text">本地博客的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关联github-page"><span class="nav-number">3.</span> <span class="nav-text">关联github page</span></a></li></ol></div>
             
 
           </div>
