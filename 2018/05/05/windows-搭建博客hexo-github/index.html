@@ -93,9 +93,14 @@
 <meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8.png">
 <meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E5%85%B3%E8%81%94githubPage.png">
 <meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E9%85%8D%E7%BD%AEgithubssh.jpg">
-<meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E9%85%8D%E7%BD%AEgithubssh.jpg">
+<meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/ssh%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.jpg">
 <meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E9%83%A8%E7%BD%B2git%E7%9A%84%E4%BF%A1%E6%81%AF.jpg">
-<meta property="og:updated_time" content="2018-05-06T05:14:25.758Z">
+<meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D.jpg">
+<meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.jpg">
+<meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/%E4%BB%93%E5%BA%93%E7%9A%84setting.jpg">
+<meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/githubPage%E5%9F%9F%E5%90%8D.png">
+<meta property="og:image" content="http://p82xdlzne.bkt.clouddn.com/CNAME.png">
+<meta property="og:updated_time" content="2018-05-06T05:25:18.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows 搭建博客hexo + github">
 <meta name="twitter:description" content="本文主要介绍在Windows环境下结合github page 搭建hexo 博客，包括自定义域名，创建七牛图床，个性化设置等。下图是总体的一个概述：下面将会一一详细说明         搭建本地博客的准备工作              安装git下载地址，如果没有特殊要求，只要一直next即可，建议自定义安装的路径。查看git是否安装：        git --version         注">
@@ -441,8 +446,7 @@
 <li><p>本地启动hexo服务器        </p>
 </li>
 </ul>
-<pre><code>
-hexo s 等价于 hexo server #这个方式启动，hexo会自动监听文件变动并自动更新，无需重启服务器                
+<pre><code>hexo s 等价于 hexo server #这个方式启动，hexo会自动监听文件变动并自动更新，无需重启服务器                
 
 hexo server -s #静态模式                
 
@@ -463,48 +467,47 @@ hexo -i 192.168.21.137 #更改IP
 <pre><code>git config --global user.name &quot;你的github用户名&quot;        
 
 git config --global user.email &quot;你的github注册邮箱&quot;        
-
 </code></pre><p>生成ssh秘钥文件        </p>
 <pre><code>ssh-keygen -t rsa -C &quot;你的github注册邮箱&quot;
 </code></pre><p><strong>然后直接按三个回车，默认不需要密码</strong><br>然后找到生成的.ssh文件夹中的id_rsa.pub公钥，将其所有内容复制，但不包括回车<br>在浏览器中打开github<a href="https://github.com/settings/keys" target="_blank" rel="noopener">设置ssh的网址</a>，创建 new ssh key，如下图：<br><img src="http://p82xdlzne.bkt.clouddn.com/%E9%85%8D%E7%BD%AEgithubssh.jpg" alt="创建github ssh"><br>在git bash中输入以下命令对公钥配置是否正确进行验证:        </p>
 <pre><code>ssh git@github.com        
-
-</code></pre><p>输出结果：<br><img src="http://p82xdlzne.bkt.clouddn.com/%E9%85%8D%E7%BD%AEgithubssh.jpg" alt="验证公钥是否正确配置"><br>配置ssh秘钥的原因是为了每次推送的时候不用手动输入账号和密码。        </p>
+</code></pre><p>输出结果：<br><img src="http://p82xdlzne.bkt.clouddn.com/ssh%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.jpg" alt="验证公钥是否正确配置"><br>配置ssh秘钥的原因是为了每次推送的时候不用手动输入账号和密码。        </p>
 <ul>
 <li><p>在站点配置文件(在blog目录下面的_config.yml文件称为<strong>站点配置文件</strong>，在blog/themes/{theme_name}/_config.yml配置文件称为<strong>主题配置文件</strong>)中配置github的信息<br>找到  Deployment ，然后做以下的配置：<br><img src="http://p82xdlzne.bkt.clouddn.com/%E9%83%A8%E7%BD%B2git%E7%9A%84%E4%BF%A1%E6%81%AF.jpg" alt="hexo配置github仓库的信息">                </p>
 </li>
-<li><p>安装部署插件<br><code>`</code><br>npm install hexo-deploy-git –save        </p>
+<li><p>安装部署插件        </p>
 </li>
 </ul>
-<pre><code>- 使用github的域名访问你的博客        
-</code></pre><p><a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a>         </p>
-<pre><code># 绑定个性化域名        
-演示通过阿里云万网绑定域名        
-- 找到阿里云控制台的域名管理            
-
-![域名解析](http://p82xdlzne.bkt.clouddn.com/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D.jpg)        
-
-- 增加解析记录：        
-
-![解析记录](http://p82xdlzne.bkt.clouddn.com/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.jpg)            
-
-关于github的ip，你可以在本地电脑的命令行ping你的github域名获取ip：        
-</code></pre><p>ping xxxx.github.io # xxxx就是你的github用户名        </p>
-<pre><code>- 登录github，进入存放博客的仓库，点击setting，设置custom domain，输入你的域名：        
-
-![仓库的setting](http://p82xdlzne.bkt.clouddn.com/%E4%BB%93%E5%BA%93%E7%9A%84setting.jpg)        
-
-
-![设置个性域名](http://p82xdlzne.bkt.clouddn.com/githubPage%E5%9F%9F%E5%90%8D.png)
-
-点击保存        
-
-- 在本地博客的blog\source目录增加CNAME文件，打开电脑记事本，在文件里面填写你的个性化域名，**域名需要带上www，例如：www.abc.com**,**注意：保存文件类型是所有文件，不是txt**        
-
-![CNAME](http://p82xdlzne.bkt.clouddn.com/CNAME.png)        
-
-- 完成以上操作，就可执行以下命令：        
-</code></pre><p>hexo clean<br>hexo g<br>hexo d<br><code>`</code><br>这个时候用浏览器打开你的域名即可访问你的博客        </p>
+<pre><code>npm install hexo-deploy-git --save        
+</code></pre><ul>
+<li>使用github的域名访问你的博客        </li>
+</ul>
+<pre><code>http://username.github.io        
+</code></pre><h1 id="绑定个性化域名"><a href="#绑定个性化域名" class="headerlink" title="绑定个性化域名"></a>绑定个性化域名</h1><p>演示通过阿里云万网绑定域名        </p>
+<ul>
+<li><p>找到阿里云控制台的域名管理<br><img src="http://p82xdlzne.bkt.clouddn.com/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D.jpg" alt="域名解析">        </p>
+</li>
+<li><p>增加解析记录：<br><img src="http://p82xdlzne.bkt.clouddn.com/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.jpg" alt="解析记录">            </p>
+</li>
+</ul>
+<p>关于github的ip，你可以在本地电脑的命令行ping你的github域名获取ip,xxxx就是你的github用户名：        </p>
+<pre><code>ping xxxx.github.io         
+</code></pre><ul>
+<li>登录github，进入存放博客的仓库，点击setting，设置custom domain，输入你的域名：        </li>
+</ul>
+<p><img src="http://p82xdlzne.bkt.clouddn.com/%E4%BB%93%E5%BA%93%E7%9A%84setting.jpg" alt="仓库的setting">        </p>
+<p><img src="http://p82xdlzne.bkt.clouddn.com/githubPage%E5%9F%9F%E5%90%8D.png" alt="设置个性域名"></p>
+<p>点击保存        </p>
+<ul>
+<li>在本地博客的blog\source目录增加CNAME文件，打开电脑记事本，在文件里面填写你的个性化域名，<strong>域名需要带上www，例如：<a href="http://www.abc.com" target="_blank" rel="noopener">www.abc.com</a></strong>,<strong>注意：保存文件名称是CNAME，文件类型是所有文件，不是txt</strong>        </li>
+</ul>
+<p><img src="http://p82xdlzne.bkt.clouddn.com/CNAME.png" alt="CNAME">        </p>
+<ul>
+<li>完成以上操作，就可执行以下命令：        <pre><code>hexo clean 
+hexo g
+hexo d
+</code></pre>这个时候用浏览器打开你的域名即可访问你的博客        </li>
+</ul>
 <p>下一篇文章将会讲解通过七牛云设置图床</p>
 
       
@@ -698,7 +701,7 @@ git config --global user.email &quot;你的github注册邮箱&quot;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建本地博客的准备工作"><span class="nav-number">1.</span> <span class="nav-text">搭建本地博客的准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地博客的使用"><span class="nav-number">2.</span> <span class="nav-text">本地博客的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关联github-page"><span class="nav-number">3.</span> <span class="nav-text">关联github page</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建本地博客的准备工作"><span class="nav-number">1.</span> <span class="nav-text">搭建本地博客的准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地博客的使用"><span class="nav-number">2.</span> <span class="nav-text">本地博客的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关联github-page"><span class="nav-number">3.</span> <span class="nav-text">关联github page</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定个性化域名"><span class="nav-number">4.</span> <span class="nav-text">绑定个性化域名</span></a></li></ol></div>
             
 
           </div>
