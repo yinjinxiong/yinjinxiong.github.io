@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>搭建hexo博客之二：搭建七牛图床</title>
+      <link href="/2018/05/07/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"/>
+      <url>/2018/05/07/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</url>
+      <content type="html"><![CDATA[<h1 id="注册七牛账号"><a href="#注册七牛账号" class="headerlink" title="注册七牛账号"></a>注册七牛账号</h1><p>点击<a href="https://portal.qiniu.com/signup/choice" target="_blank" rel="noopener">注册网址</a>        </p><p>选择 &lt;申请个人账户&gt;<br><img src="http://p82xdlzne.bkt.clouddn.com/%E4%B8%83%E7%89%9B%E4%BA%91%E6%B3%A8%E5%86%8C%E4%B8%AA%E4%BA%BA.jpg" alt="申请个人账户">        </p><p>填写个人资料信息，并按照提示进行身份认证，只有身份认证，才有更多的空间赠送<br><img src="http://p82xdlzne.bkt.clouddn.com/%E4%B8%83%E7%89%9B%E4%BA%91%E5%A1%AB%E5%86%99%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF.png" alt="个人资料">        </p><p>注册完成后，登录账号，进入&lt;管理控制台&gt;，在个人主页增加对象存储<br><img src="http://p82xdlzne.bkt.clouddn.com/%E4%B8%83%E7%89%9B%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%8C%89%E9%92%AE.png" alt="点击控制台">        </p><p><img src="http://p82xdlzne.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8%E5%AF%B9%E8%B1%A1.png" alt="点击增加对象存储">        </p><p><img src="http://p82xdlzne.bkt.clouddn.com/%E4%B8%83%E7%89%9B%E5%AD%98%E5%82%A8%E5%85%AC%E5%BC%80%E7%A9%BA%E9%97%B4.png" alt="增加对象存储">        </p><p>在新建的存储空间，点击&lt;内容管理&gt;，便可上传图片        </p><p><img src="http://p82xdlzne.bkt.clouddn.com/%E4%B8%83%E7%89%9B%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87.png" alt="上传图片">        </p><p>上传图片后，可以获取图片外链，即可通过外链访问图片        </p><p><img src="http://p82xdlzne.bkt.clouddn.com/%E4%B8%83%E7%89%9B%E5%9B%BE%E7%89%87%E5%A4%96%E9%93%BE.jpg" alt="获取外链">        </p>]]></content>
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 图床搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>windows 搭建博客hexo + github</title>
       <link href="/2018/05/05/windows-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2hexo-github/"/>
       <url>/2018/05/05/windows-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2hexo-github/</url>
