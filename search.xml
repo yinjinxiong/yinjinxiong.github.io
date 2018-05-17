@@ -79,7 +79,7 @@
       <title>hexo的常用命令</title>
       <link href="/2018/05/01/hexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
       <url>/2018/05/01/hexo%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-      <content type="html"><![CDATA[<p>主要是记录使用hexo写博客的常用命令        </p><h1 id="生成post文件"><a href="#生成post文件" class="headerlink" title="生成post文件"></a>生成post文件</h1><pre><code>hexo n 文章标题            eg：        hexo n index        </code></pre><h1 id="生成html文件"><a href="#生成html文件" class="headerlink" title="生成html文件"></a>生成html文件</h1><pre><code>hexo g         </code></pre><h1 id="发布到远程站点，比如GitHub"><a href="#发布到远程站点，比如GitHub" class="headerlink" title="发布到远程站点，比如GitHub"></a>发布到远程站点，比如GitHub</h1><pre><code>hexo d        </code></pre><h1 id="启动本地的服务"><a href="#启动本地的服务" class="headerlink" title="启动本地的服务"></a>启动本地的服务</h1><pre><code>hexo s         </code></pre>]]></content>
+      <content type="html"><![CDATA[<p>主要是记录使用hexo写博客的常用命令,下面三个命令最好是在博客的<strong>初始化目录中执行</strong>        </p><h1 id="生成post文件"><a href="#生成post文件" class="headerlink" title="生成post文件"></a>生成post文件</h1><pre><code>hexo n 文章标题            eg：        hexo n index        </code></pre><h1 id="生成html文件"><a href="#生成html文件" class="headerlink" title="生成html文件"></a>生成html文件</h1><pre><code>hexo g         </code></pre><h1 id="发布到远程站点，比如GitHub"><a href="#发布到远程站点，比如GitHub" class="headerlink" title="发布到远程站点，比如GitHub"></a>发布到远程站点，比如GitHub</h1><pre><code>hexo d        </code></pre><h1 id="启动本地的服务"><a href="#启动本地的服务" class="headerlink" title="启动本地的服务"></a>启动本地的服务</h1><pre><code>hexo s         </code></pre>]]></content>
       
       <categories>
           
